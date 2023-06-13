@@ -1,0 +1,167 @@
+:root {
+  --primary-100: #4f46e5;
+  --primary-200: #312e81;
+  --grey-100: #d1d5db;
+  --grey-200: #9ca3af;
+
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__step__bar {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+}
+
+.app__step__bar__line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--grey-200);
+}
+
+.app__step__bar__line__active {
+  background-color: var(--primary-100);
+}
+
+.app__step__bar__circle {
+  border: 3px solid var(--grey-200);
+  aspect-ratio: 1;
+  padding: 1rem;
+  border-radius: 25px;
+  z-index: 100;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__step__bar__circle__active,
+.app__step__bar__circle__done {
+  border: 3px solid var(--primary-100);
+  color: var(--primary-100);
+}
+
+.app__step__bar__circle__done {
+  background-color: var(--primary-100);
+  color: #fff;
+}
+
+.app__step__bar__icon {
+  position: absolute;
+}
+
+input {
+  border: 2px solid var(--grey-200) !important;
+}
+
+input:focus{
+  border: 2px solid var(--primary-100) !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-100) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-200) !important;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-100) !important;
+  color: var(--primary-100);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-100) !important;
+  color: #fff !important;
+}
+
+.btn-outline-primary:active {
+  background-color: var(--primary-200) !important;
+  color: #fff !important;
+}
+
+.app__file__label {
+  border: 2px dashed var(--grey-200);
+  width: 100%;
+  padding: 4rem;
+  color: var(--grey-200);
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.app__file__container::after {
+  padding: .5rem;
+  text-align: center;
+  color: var(--grey-200);
+  content: "Attach file. File size of your document should not exceed 10MB";
+}
+
+.app__file__container {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__step__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.invalid-field,
+.invalid-field:active,
+.invalid-field:focus {
+  color: red !important;
+  border-color: red !important;
+}
+
+
+.app__prev__img {
+  position: absolute;
+  height: 100%;
+}
+
+
+.app__third__step_container,
+.app__img__finish__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app__img__finish__container {
+  max-width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid var(--primary-100);
+  overflow: hidden;
+}
+
+.app__img__finish {
+  width: 100%;
+}
+
+.app__final__msg {
+  color: var(--primary-100)
+}
