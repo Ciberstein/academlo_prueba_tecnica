@@ -61,7 +61,7 @@ export const FirstStep = ({ changeStep, data, setData }) => {
             <div className='col-md-6'>
                 <div className="mb-3">
                     <label htmlFor="inputTelephone" className="form-label">Telefono</label>
-                    <input {...register('inputTelephone', { required: 'Este campo es requerido' })} className={`form-control form-control-lg ${ errors.inputTelephone ? 'invalid-field' : null }`} type="number" id="inputTelephone" placeholder="Escribe aqui" />
+                    <input {...register('inputTelephone', { required: 'Este campo es requerido' })} className={`form-control form-control-lg ${ errors.inputTelephone ? 'invalid-field' : null }`} type="tel" id="inputTelephone" placeholder="Escribe aqui" />
                     {errors.inputTelephone && <span className="invalid-field">{errors.inputTelephone.message}</span>}
                 </div>
             </div>
