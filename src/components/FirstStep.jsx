@@ -41,7 +41,7 @@ export const FirstStep = ({ changeStep, data, setData }) => {
             <div className='col-md-12'>
                 <div className="mb-3">
                     <label htmlFor="inputLinkedin" className="form-label">URL del Lnkedin</label>
-                    <input {...register('inputLinkedin', { required: 'Este campo es requerido' })} className={`form-control form-control-lg ${ errors.inputLinkedin ? 'invalid-field' : null }`} type="text" id="inputLinkedin" placeholder="Escribe aqui" />
+                    <input {...register('inputLinkedin', { required: 'Este campo es requerido' })} className={`form-control form-control-lg ${ errors.inputLinkedin ? 'invalid-field' : null }`} type="url" id="inputLinkedin" placeholder="Escribe aqui" />
                     {errors.inputLinkedin && <span className="invalid-field">{errors.inputLinkedin.message}</span>}
 
                 </div>
